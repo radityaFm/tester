@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+      /* ... (Bagian CSS sebelumnya) ... */
+
+      .button-container {
+        margin-top: 15px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 8px; /* Ukuran padding yang diubah */
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 50%; /* Ukuran tombol yang diubah */
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #140f12;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 50%;
+        margin-top: 12px;
+      }
+
+      button:hover {
+        background-color: #140f12;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="registerForm">
+        <h2>Register</h2>
+        <div class="input-group">
+          <label for="username">Username:</label><i class="bx bxs-user"></i>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Masukan Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="input-group">
+          <label for="confirmPassword">Konfirmasi Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required />
+        </div>
+        <div class="button-container">
+          <button type="button" onclick="register()"><a href="index3.html">Register</a></button>
+        </div>
+      </form>
+    </div>
+    <script>
+      function register() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Tambahkan ketentuan untuk username dan password di sini
+        if (username !== "radit" || password !== "123456"){
+          alert('Username and password must be at least 6 characters long.');
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert('Passwords Failed.');
+          return;
+        }
+
+        // Kirim data pendaftaran ke server atau lakukan operasi lainnya di sini
+        alert('Registration successful!');
+        return;
+      }
+    </script>
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

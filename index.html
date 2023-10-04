@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tester</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(fotohitam2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .login-container {
+            background: transparent;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 11px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            backdrop-filter: blur(20px);
+            border: 2px solid;
+            box-shadow: 0 0 10px black;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: 'Arial Narrow Bold';
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #140f12;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #140f12;
+        }
+        .name-input {
+            width: 100%;
+        }
+        .forgot-password-link{
+            margin-top: 20px;
+        }
+        .hero{
+            margin-top: 12px;
+            color: #fff;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+
+        }
+        u{
+            color: blue;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+            var forgotPasswordLink = document.getElementById("forgot-password-link");
+
+            if (username !== "radit" || password !== "9") { // Ganti "pengguna" dan "katasandi" dengan nilai yang benar
+                errorMessage.style.display = "block";
+                forgotPasswordLink.style.display = "block";
+            } else {
+                window.location.href = "file:///C:/Users/RADITYA%20FEBRIANDARU/Documents/testing/index3.html"; // Ganti "signin.html" dengan URL yang sesuai
+            }
+        }
+    </script>
+</html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    
+</head>
+</html>
+<head>
+    
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Masukan Username">
+        <input type="password" id="password" placeholder="Masukan Sandi">
+        <p id="error-message" style="color: red; display: none;">Nama atau Sandi salah</p>
+        <button onclick="checkPassword()">Login</button>
+        <br>
+        <br>
+        <p id="forgot-password-link" style="display: none;">
+            <a href="index2.html"><u>Lupa Sandi?</u></a>
+        </p>
+        <p class="hero">Don't have Account? <b><a href="file:///C:/Users/RADITYA%20FEBRIANDARU/Documents/testing/outdex.html">Register</a></b></p>
+    </div>
+
+    
+</body>
+</html>
